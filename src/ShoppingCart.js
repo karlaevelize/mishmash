@@ -20,7 +20,8 @@ class ShoppingCart {
     }
 
     total (){
-        
+        return this.items.reduce((total, item) =>
+        total + item.quantity * item.pricePerUnit, 0) 
     }
 }
 
